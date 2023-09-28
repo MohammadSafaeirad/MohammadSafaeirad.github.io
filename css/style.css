@@ -2023,6 +2023,16 @@ img {
 	transition: all 2000ms ease;
 }
 
+/* .bar-item .skill-header {
+	position: relative;
+	line-height: 26px;
+	font-size: 18px;
+	font-weight: 600;
+	margin-bottom: 9px;
+	color: #ff0000;
+	text-transform: capitalize;
+} */
+
 .bar-item .skill-header {
 	position: relative;
 	line-height: 26px;
@@ -2031,6 +2041,18 @@ img {
 	margin-bottom: 9px;
 	color: #ff0000;
 	text-transform: capitalize;
+	display: flex;
+	align-items: center;
+	/* Vertically align the image and skill title */
+}
+
+.bar-item .skill-icon {
+	width: 34px;
+	/* Adjust the width of the icons as needed */
+	height: 34px;
+	/* Adjust the height of the icons as needed */
+	margin-right: 10px;
+	/* Add some spacing between the icon and the skill title */
 }
 
 .bar-item .skill-header .skill-title {
