@@ -1991,7 +1991,7 @@ img {
 	Progress Bars
 ==========================*/
 
-.bar-item {
+/* .bar-item {
 	position: relative;
 	margin-bottom: 25px;
 }
@@ -2023,16 +2023,6 @@ img {
 	transition: all 2000ms ease;
 }
 
-/* .bar-item .skill-header {
-	position: relative;
-	line-height: 26px;
-	font-size: 18px;
-	font-weight: 600;
-	margin-bottom: 9px;
-	color: #ff0000;
-	text-transform: capitalize;
-} */
-
 .bar-item .skill-header {
 	position: relative;
 	line-height: 26px;
@@ -2043,16 +2033,16 @@ img {
 	text-transform: capitalize;
 	display: flex;
 	align-items: center;
-	/* Vertically align the image and skill title */
+	
 }
 
 .bar-item .skill-icon {
 	width: 34px;
-	/* Adjust the width of the icons as needed */
+	
 	height: 34px;
-	/* Adjust the height of the icons as needed */
+	
 	margin-right: 10px;
-	/* Add some spacing between the icon and the skill title */
+	
 }
 
 .bar-item .skill-header .skill-title {
@@ -2102,7 +2092,84 @@ img {
 .bar-item .skill-percentage .count-box {
 	position: relative;
 	display: flex;
+} */
+
+/* Container for skills */
+.progress-bars {
+	display: flex;
+	flex-wrap: wrap;
 }
+
+/* Individual skill item */
+.bar-item {
+	position: relative;
+	margin-bottom: 25px;
+	overflow: hidden;
+	transition: transform 0.3s ease;
+}
+
+.bar-item .skill-header {
+	position: relative;
+	line-height: 26px;
+	font-size: 18px;
+	font-weight: 600;
+	margin-bottom: 9px;
+	color: #1A191D;
+	text-transform: capitalize;
+	display: flex;
+	align-items: center;
+}
+
+.bar-item .skill-icon {
+	width: 34px;
+	height: 34px;
+	margin-right: 10px;
+}
+
+.bar-item .skill-title {
+	position: relative;
+}
+
+.bar-item .skill-percentage {
+	position: absolute;
+	right: -15px;
+	top: 0;
+	font-size: 12px;
+	line-height: 20px;
+	font-weight: 500;
+	color: #fff;
+	width: 38px;
+	height: 18px;
+	background-color: #1A191D;
+	box-shadow: 0 0 15px rgba(0, 0, 0, .09);
+	display: flex;
+	opacity: 0;
+	visibility: hidden;
+	justify-content: center;
+	transform: translateY(-100%);
+}
+
+.bar-item:hover {
+	transform: translateY(-10px);
+}
+
+.bar-item:hover .skill-percentage {
+	transform: translateY(0);
+	opacity: 1;
+	visibility: visible;
+}
+
+.bar-item .skill-percentage:before {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -5px;
+	border-left: 19px solid transparent;
+	border-right: 19px solid transparent;
+	border-top: 5px solid #1A191D;
+	content: "";
+}
+
 
 /*==========================
 	Fact Counter
